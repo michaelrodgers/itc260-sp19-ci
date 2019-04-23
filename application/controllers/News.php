@@ -53,8 +53,17 @@ class News extends CI_Controller {
 				$this->load->view('templates/footer');
 
 			} else {
-				$this->news_model->set_news();
-				$this->load->view('news/success');
+				//$this->news_model->set_news();
+				//$this->load->view('news/success');
+				
+				$slug = $this->news_model->set_news();
+				if($slug !== false){//slug sent
+					feedback('Data entered successfully!','info');
+					redirect('news/view/' . $slug);
+				} else { //error
+					feedback('Data NOT entered!','error');
+					redirect('news/create');
+				}
 			}
 		}
 }
