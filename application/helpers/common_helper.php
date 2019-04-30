@@ -1,7 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 //common_helper.php
-
-if(!function_exists('startSession'))
+ if(!function_exists('startSession'))
 {
 	 /**
 	 * wrapper function for PHP session_start(), to prevent 'session already started' error messages. 
@@ -24,8 +23,7 @@ if(!function_exists('startSession'))
 		if(isset($_SESSION)){return true;}else{return false;}
 	}
 }#end startSession()
-
-if(!function_exists('feedback'))
+ if(!function_exists('feedback'))
 {
 	/**
 	 * loads a quick user message (flash/heads up) to provide user feedback
@@ -53,11 +51,9 @@ if(!function_exists('feedback'))
 	
 	}
 }#end feedback()
-
-if(!function_exists('bootswatchFeedback'))
+ if(!function_exists('bootswatchFeedback'))
 {
-
-	/**
+ 	/**
 	 * shows a quick user message (flash/heads up) to provide user feedback
 	 *
 	 * Uses a Session to store the data until the data is displayed via bootswatchFeedback()
@@ -110,5 +106,19 @@ if(!function_exists('bootswatchFeedback'))
 		}
 		return $myReturn; //data passed back for printing
 	} 
-
-}#end bootswatchFeedback()
+ }#end bootswatchFeedback()
+ if(!function_exists('makeLinks'))
+{
+	function makeLinks($nav)
+		{
+			$myReturn = '';
+			foreach($nav as $key => $value){
+				if($key == current_url()){
+					$myReturn .= "<li class=\"active\"><a href=\"$key\">$value</a></li>";
+				} else {
+					$myReturn .= "<li><a href=\"$key\">$value</a></li>";
+				}
+			}
+			return $myReturn;
+		}
+}
