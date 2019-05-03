@@ -5,12 +5,12 @@ $this->load->view($this->config->item('theme').'header');
 
  <h2><?php echo $title; ?></h2>
 
-<a href='Nova' style="padding-right: 5em">Nova</a><t>
-<a href='Fortnite' style="padding-right: 5em">Fortnite</a>
-<a href='Democracy' style="padding-right: 5em">Democracy</a>
-<a href='BlackPanther' style="padding-right: 5em">Black Panther</a>
-<a href='BohemianRhapsody' style="padding-right: 5em">Bohemian Rhapsody</a>
-<a href='Bitcoin' style="padding-right: 5em">Bitcoin</a>
+<a href='pics/Nova' style="padding-right: 5em">Nova</a><t>
+<a href='pics/Fortnite' style="padding-right: 5em">Fortnite</a>
+<a href='pics/Democracy' style="padding-right: 5em">Democracy</a>
+<a href='pics/BlackPanther' style="padding-right: 5em">Black Panther</a>
+<a href='pics/BohemianRhapsody' style="padding-right: 5em">Bohemian Rhapsody</a>
+<a href='pics/Bitcoin' style="padding-right: 5em">Bitcoin</a>
 	
 <pre style="clear:both;"></pre>
 	
